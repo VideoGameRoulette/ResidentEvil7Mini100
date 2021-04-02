@@ -134,12 +134,12 @@ function appendData(data) {
 	});
 	
 	//Fine
-	if (data.CurrentHP <= 1500 && data.CurrentHP >= 601) {
+	if (data.CurrentHP <= 3000 && data.CurrentHP >= 601) {
 		mainContainer.innerHTML += `
 		<div class="tag">
 			<i class="fas fa-heartbeat"></i>
 		</div>
-		<div id="value"><font size="4" color="#7cfc00">${data.CurrentHP}</font></div>`;
+		<div id="value"><font size="4" color="#7cfc00">${data.CurrentHP.toFixed(1)}</font></div>`;
 	}	
 	
 	//Caution!
@@ -148,7 +148,7 @@ function appendData(data) {
 		<div class="tag">
 			<i class="fas fa-heartbeat"></i>
 		</div>
-		<div id="value"><font size="4" color="#daa520">${data.CurrentHP}</font></div>`;
+		<div id="value"><font size="4" color="#daa520">${data.CurrentHP.toFixed(1)}</font></div>`;
 	}
 	
 	//Dangerops!
@@ -157,7 +157,7 @@ function appendData(data) {
 		<div class="tag">
 			<i class="fas fa-heartbeat"></i>
 		</div>
-		<div id="value"><font size="4" color="#ff0000">${data.CurrentHP}</font></div>`;
+		<div id="value"><font size="4" color="#ff0000">${data.CurrentHP.toFixed(1)}</font></div>`;
 	}
 	
 	//Default
@@ -166,7 +166,7 @@ function appendData(data) {
 		<div class="tag">
 			<i class="fas fa-heartbeat"></i>
 		</div>
-		<div id="value"><font size="4" color="#ff0000">${data.CurrentHP}</font></div>`;
+		<div id="value"><font size="4" color="#ff0000">${data.CurrentHP.toFixed(1)}</font></div>`;
 	}
 		
 	mainContainer.innerHTML += `
