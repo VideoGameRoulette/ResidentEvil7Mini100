@@ -213,6 +213,7 @@ function appendData(data) {
 	});
 
 	function isBoss(data, enemy) {
+	//Main Campaign
 	if (
 		data.includes("Storeroom01") && enemy.MaximumHP === enemyHP[0].easy || 
 		data.includes("Ship") && enemy.MaximumHP === enemyHP[0].easy || 
@@ -246,6 +247,12 @@ function appendData(data) {
 		data.includes("c01Outside01") && enemy.MaximumHP === enemyHP[7].hard) {
 		return true;
 	} 
+
+	//Not A Hero
+	else if (
+		data.includes("c08_MiningDome01") && enemy.MaximumHP === 50000) {
+		return true;
+	}
 
 	else {
 		return false;
